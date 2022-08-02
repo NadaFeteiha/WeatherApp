@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.nadafeteiha.weatherapp.api.domain.DataHourly" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/item_height_hourly"
+        android:layout_marginHorizontal="@dimen/small_margin">
+
+        <TextView
+            android:id="@+id/text_day"
+            style="@style/textBody"
+            hour="@{data.timestamp_local}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon_weather"
+            weatherIcon="@{data.weather.icon}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/icon_weather"
+            app:layout_constraintBottom_toTopOf="@+id/text_temp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_day" />
+
+        <TextView
+            android:id="@+id/text_temp"
+            style="@style/textBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/degree_text(Double.toString(data.temp))}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icon_weather" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Weather</string>
+
+    <string name="city_contry_text">%s,%s</string>
+    <string name="high_temp">H: %s&#xb0;</string>
+    <string name="low_temp">L: %s&#xb0;</string>
+
+    <string name="low_high_temp">L:%s&#xb0; \t H:%s&#xb0;</string>
+    <string name="degree_text">%s&#xb0;</string>
+
+</resources>

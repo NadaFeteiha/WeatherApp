@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="extra_title_size">64sp</dimen>
+    <dimen name="title_size">38sp</dimen>
+    <dimen name="subtitle_size">18sp</dimen>
+    <dimen name="body_size">16sp</dimen>
+
+    <dimen name="normal_padding">8dp</dimen>
+    <dimen name="small_padding">4dp</dimen>
+
+    <dimen name="normal_margin">16dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+
+    <dimen name="item_height_forecast">50dp</dimen>
+    <dimen name="item_height_hourly">80dp</dimen>
+
+</resources>
