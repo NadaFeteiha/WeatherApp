@@ -1,5 +1,7 @@
 package com.nadafeteiha.weatherapp.ui
 
+import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -56,7 +58,7 @@ class MainViewModel :ViewModel() {
             }
 
             override fun onFailure(call: Call<HourlyWeatherResponse>, t: Throwable) {
-                TODO("Not yet implemented")
+                Log.e("WEATHER_API",t.message.toString())
             }
         })
     }

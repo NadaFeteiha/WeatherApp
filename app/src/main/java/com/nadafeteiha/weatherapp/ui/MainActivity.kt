@@ -30,8 +30,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        askPermission()
-
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
 
@@ -60,38 +58,5 @@ class MainActivity : AppCompatActivity() {
                 forecastAdapter.submitList(response.weatherData)
         }
     }
-
-
-    /**
-     * access user location
-     * */
-    private fun askPermission(){
-        this.checkBackgroundLocationPermissionAPI30(101)
-    }
-
-
-    private fun Context.checkBackgroundLocationPermissionAPI30(backgroundLocationRequestCode: Int) {
-        if (checkSinglePermission(Manifest.permission.ACCESS_BACKGROUND_LOCATION)) return
-        AlertDialog.Builder(this)
-            .setTitle("ttg")
-            .setMessage("nkjnjn")
-            .setPositiveButton("yes") { _,_ ->
-                // this request will take user to Application's Setting page
-                requestPermissions(
-                    arrayOf(Manifest.permission.ACCESS_BACKGROUND_LOCATION),
-                    backgroundLocationRequestCode
-                )
-            }
-            .setNegativeButton("No") { dialog,_ ->
-                dialog.dismiss()
-            }
-            .create()
-            .show()
-    }
-
-    private fun Context.checkSinglePermission(permission: String) : Boolean {
-        return ContextCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_GRANTED
-    }
-
 }
 

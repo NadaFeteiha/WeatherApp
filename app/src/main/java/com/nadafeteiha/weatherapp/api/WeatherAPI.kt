@@ -12,8 +12,8 @@ interface WeatherAPI {
     @GET("v2.0/forecast/daily")
     fun getForecast(
         @Query("key") api: String = Constants.API_KEY,
-        @Query("lat") lat: String = "30",
-        @Query("lon") lon: String = "31",
+        @Query("lat") lat: String = Constants.lat,
+        @Query("lon") lon: String = Constants.lon,
         @Query("days") days: Int = 5
     ): Call<WeatherResponse>
 

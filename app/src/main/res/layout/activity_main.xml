@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <import type="android.view.View"/>
 
         <variable
             name="viewModel"
@@ -73,6 +74,12 @@
             app:layout_constraintStart_toEndOf="@+id/text_high_temp"
             app:layout_constraintTop_toBottomOf="@+id/text_weather_description" />
 
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/current_weather_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.weatherResponse==null ?  View.INVISIBLE : View.VISIBLE }"
+            app:constraint_referenced_ids="text_low_temp,text_high_temp,text_weather_description,text_current_temp,text_city" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_weather"
