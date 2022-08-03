@@ -73,68 +73,17 @@
             app:layout_constraintStart_toEndOf="@+id/text_high_temp"
             app:layout_constraintTop_toBottomOf="@+id/text_weather_description" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/hourly_card"
-            style="?attr/materialCardViewFilledStyle"
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_weather"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/normal_margin"
             android:layout_marginTop="@dimen/normal_margin"
             app:cardBackgroundColor="?attr/colorSecondary"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="1dp"
-            app:cardUseCompatPadding="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_low_temp">
+            app:layout_constraintTop_toBottomOf="@id/text_low_temp" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_hourly"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/small_margin"
-                android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_hourly_list" />
-
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/forecast"
-            style="?attr/materialCardViewFilledStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/normal_margin"
-            app:cardBackgroundColor="?attr/colorSecondary"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="1dp"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hourly_card">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_weather"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/small_margin"
-                tools:listitem="@layout/item_days_forecast" />
-
-
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <ProgressBar
-            android:id="@+id/status_loading_wheel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:indeterminate="true"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

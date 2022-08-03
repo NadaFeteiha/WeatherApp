@@ -1,4 +1,4 @@
-package com.nadafeteiha.weatherapp.ui
+package com.nadafeteiha.weatherapp.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

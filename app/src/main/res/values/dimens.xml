@@ -11,8 +11,9 @@
 
     <dimen name="normal_margin">16dp</dimen>
     <dimen name="small_margin">8dp</dimen>
+    <dimen name="extra_small_margin">4dp</dimen>
 
     <dimen name="item_height_forecast">50dp</dimen>
-    <dimen name="item_height_hourly">80dp</dimen>
+    <dimen name="item_height_hourly">90dp</dimen>
 
 </resources>

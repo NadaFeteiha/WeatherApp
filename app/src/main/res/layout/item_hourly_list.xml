@@ -14,12 +14,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="@dimen/item_height_hourly"
+        android:layout_marginVertical="@dimen/extra_small_margin"
         android:layout_marginHorizontal="@dimen/small_margin">
 
         <TextView
             android:id="@+id/text_day"
             style="@style/textBody"
-            hour="@{data.timestamp_local}"
+            hour="@{data.timestamp_utc}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"

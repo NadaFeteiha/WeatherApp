@@ -1,11 +1,10 @@
-package com.nadafeteiha.weatherapp.ui
+package com.nadafeteiha.weatherapp.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.nadafeteiha.weatherapp.api.domain.Data
 import com.nadafeteiha.weatherapp.api.domain.DataHourly
 import com.nadafeteiha.weatherapp.databinding.ItemHourlyListBinding
 
@@ -17,7 +16,7 @@ class HourlyAdapter : ListAdapter<DataHourly, HourlyAdapter.HourlyViewHolder>(Ho
         }
 
         override fun areContentsTheSame(oldItem: DataHourly, newItem: DataHourly): Boolean {
-            return oldItem.timestamp_local == newItem.timestamp_local
+            return oldItem.timestamp_utc == newItem.timestamp_utc
         }
     }
 
