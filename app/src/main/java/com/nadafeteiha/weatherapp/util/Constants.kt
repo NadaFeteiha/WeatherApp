@@ -6,9 +6,6 @@ object Constants {
     const val IMAGE_URL = "https://www.weatherbit.io/static/img/icons/"
     const val APP_UNIT = ""
 
-    const val VIEW_WEATHER_HOURLY = 0
-    const val VIEW_DAYS_FORECAST = 1
-
     const val PREFERENCE_NAME = "WeatherAppPreference"
 
 }

@@ -8,4 +8,5 @@
     <string name="low_high_temp">L:%s&#xb0; \t H:%s&#xb0;</string>
     <string name="degree_text">%s&#xb0;</string>
 
+    <string name="permission_required_text">permission_required_text</string>
 </resources>

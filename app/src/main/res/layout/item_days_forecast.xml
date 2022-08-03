@@ -9,12 +9,12 @@
         <variable
             name="data"
             type="com.nadafeteiha.weatherapp.api.domain.Data" />
-
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/item_height_forecast">
+        android:layout_height="@dimen/item_height_forecast"
+        android:layout_marginHorizontal="@dimen/small_margin">
 
         <TextView
             android:id="@+id/text_day"
